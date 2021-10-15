@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class invertido {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.printf("Digite um nmero inteiro ");
+		System.out.printf("Digite um número inteiro ");
 		int num = sc.nextInt();
 		int n = num;
 		int mod=10;
@@ -11,13 +11,12 @@ public class invertido {
 		sc.close();
 		while(n!=0) {
 			num%=mod;
-			num_f+=num;
-			num_f*=10;
-			n-=num;
-			n/=10;
+			num_f=(num_f+num)*mod;
+			n=(n-num)/mod;
 			num=n;
 		}
-		num_f/=10;
-		System.out.println("Nmero invertido "+num_f);
+		num_f/=mod;
+		System.err.println("Número digitado "+n);
+		System.out.println("Número invertido "+num_f);
 		sc.close();
 }}
