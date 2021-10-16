@@ -7,16 +7,14 @@ public class invertido {
 		int num = sc.nextInt();
 		int n = num;
 		int mod=10;
-		int num_f = 0;
+		String num_f="";
 		sc.close();
 		while(n!=0) {
 			num%=mod;
-			num_f=(num_f+num)*mod;
+			num_f += num;
 			n=(n-num)/mod;
 			num=n;
 		}
-		num_f/=mod;
-		System.err.println("Número digitado "+n);
 		System.out.println("Número invertido "+num_f);
 		sc.close();
 }}
